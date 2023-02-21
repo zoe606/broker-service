@@ -63,7 +63,7 @@ func (app *Config) HandleSubmission(w http.ResponseWriter, r *http.Request) {
 	case "mail":
 		app.sendMail(w, requestPayload.Mail)
 	default:
-		app.errorJSON(w, errors.New("Unknwon action"))
+		app.errorJSON(w, errors.New("unknown action"))
 	}
 }
 
